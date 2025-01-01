@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Jorge Mikhael Gubantes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #008080;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:not(:last-child)::after {
+            content: '|';
+            margin-left: 10px;
+            color: #888;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: #008080;
+            text-decoration: underline;
+        }
+
+        .content {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #008080;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            align-items: flex-start;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 800px;
+            overflow: hidden;
+            border: 3px solid #008080;
+        }
+
+        .photo-container {
+            background: #fff;
+            border: 5px solid #eaeaea;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 500px;
+            height: 300px;
+            flex-shrink: 0;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .text-container h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .text-container p {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            header h1 {
+                flex: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            header nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .photo-container {
+                margin: 0 0 15px 0;
+            }
+
+            .text-container {
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jorge Mikhael Gubantes</h1>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="about_me.html">About Me</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Projects</h2>
+        <p>One of the projects I’m proud to showcase is an Employee Management System built using Python. This project combines a Tkinter-based GUI with an SQLite3 database, demonstrating my ability to integrate user-friendly interfaces with efficient back-end data management.</p>
+
+        <div class="container">
+            <div class="card">
+                <div class="photo-container">
+                    <img src="Random Pictures\EMS.png" alt="Employee Management Sysytem">
+                </div>
+                <div class="text-container">
+                    <h3>Employee Management System</h3>
+                    <p>The Employee Management System is a Python-based project that streamlines employee record management through a user-friendly Tkinter GUI and a robust SQLite3 database. Key features include adding, editing, deleting, and sorting employee records by attributes such as ID, name, or role. The system ensures efficient data organization and an intuitive interface, making it a practical tool for managing employee information.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

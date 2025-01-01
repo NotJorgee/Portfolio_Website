@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hobbies - Jorge Mikhael Gubantes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #008080;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:not(:last-child)::after {
+            content: '|';
+            margin-left: 10px;
+            color: #888;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: #008080;
+            text-decoration: underline;
+        }
+
+        .content {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #008080;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            align-items: flex-start;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            overflow: hidden;
+            border: 3px solid #008080;
+        }
+
+        .photo-container {
+            background: #fff;
+            border: 5px solid #eaeaea;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            height: 200px;
+            flex-shrink: 0;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .photo-container img, .photo-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .text-container h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .text-container p {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            header h1 {
+                flex: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            header nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .photo-container {
+                margin: 0 0 15px 0;
+            }
+
+            .text-container {
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jorge Mikhael Gubantes</h1>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="about_me.html">About Me</a>
+            <a href="hobbies.html" class="active">Hobbies</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>Hobbies</h2>
+        <p>Hobbies play a vital role in keeping life balanced and enjoyable. They allow us to step back from our daily routines, recharge, and connect with what truly excites us. Here’s what I love to do:</p>
+
+        <div class="container">
+            <div class="card">
+                <div class="photo-container">
+                    <video src="Random Videos\Valorant Ace Clip.mp4" autoplay loop muted></video>
+                </div>
+                <div class="text-container">
+                    <h3>Playing Video Games</h3>
+                    <p>Gaming is more than just fun for me—it’s a window into creativity and innovation, especially as I explore the world of game development.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-container">
+                    <img src="Random Pictures\Tech and Engineering.webp" alt="Tech and Engineering">
+                </div>
+                <div class="text-container">
+                    <h3>Learning About Tech and Engineering</h3>
+                    <p>I’m always curious about how things work, whether it’s the latest tech trends or the mechanics of engineering marvels.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-container">
+                    <video src="Random Videos\Starshp Test Flight  5.mp4" autoplay loop muted></video>
+                </div>
+                <div class="text-container">
+                    <h3>Watching Rocket Launches</h3>
+                    <p>There’s something awe-inspiring about watching humanity reach for the stars. Rocket launches never fail to spark my sense of wonder.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-container">
+                    <img src="Random Pictures\JJK Anime.jpg" alt="Anime">
+                </div>
+                <div class="text-container">
+                    <h3>Anime and Movies</h3>
+                    <p>I’m a big fan of storytelling, especially in anime and movies. They’re a great way to relax and draw creative inspiration.</p>
+                </div>
+            </div>
+            <div class="card">
+                <div class="photo-container">
+                    <img src="Random Pictures\Spotify.jpg" alt="Music">
+                </div>
+                <div class="text-container">
+                    <h3>Listening to Music</h3>
+                    <p>Music is my go-to for chilling out and recharging. It’s a constant companion when I need to unwind or focus.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me - Jorge Mikhael Gubantes</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        body.loaded {
+            opacity: 1;
+        }
+
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 20px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+            color: #008080;
+        }
+
+        header nav {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        header nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            position: relative;
+            transition: color 0.3s ease;
+        }
+
+        header nav a:not(:last-child)::after {
+            content: '|';
+            margin-left: 10px;
+            color: #888;
+        }
+
+        header nav a:hover, header nav a.active {
+            color: #008080;
+            text-decoration: underline;
+        }
+
+        .content {
+            margin: 50px auto;
+            max-width: 800px;
+            padding: 0 20px;
+        }
+
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 20px;
+            color: #008080;
+            text-align: center;
+        }
+
+        .content p {
+            font-size: 16px;
+            line-height: 1.6;
+            text-align: justify;
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .card {
+            display: flex;
+            align-items: flex-start;
+            background: #f9f9f9;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            overflow: hidden;
+            border: 3px solid #008080;
+        }
+
+        .photo-container {
+            background: #fff;
+            border: 5px solid #eaeaea;
+            border-radius: 5px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 150px;
+            height: 200px;
+            flex-shrink: 0;
+            margin-right: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .photo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .text-container {
+            flex: 1;
+            padding: 10px;
+        }
+
+        .text-container h3 {
+            margin: 0;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        .text-container p {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                flex-wrap: wrap;
+                text-align: center;
+            }
+
+            header h1 {
+                flex: 100%;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+
+            header nav {
+                justify-content: center;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .card {
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+            }
+
+            .photo-container {
+                margin: 0 0 15px 0;
+            }
+
+            .text-container {
+                text-align: center;
+                padding: 0 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Jorge Mikhael Gubantes</h1>
+        <nav>
+            <a href="index.html">Home Page</a>
+            <a href="about_me.html" class="active">About Me</a>
+            <a href="hobbies.html">Hobbies</a>
+            <a href="education.html">Education</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <div class="content">
+        <h2>About Me</h2>
+        <p>Hi! I'm Jorge Mikhael Retuya Gubantes, a 2nd-year Bachelor of Science in Information Technology student at Eastern Visayas State University - Ormoc Campus.</p>
+        <p>I’m passionate about exploring the intersection of AI and game development, constantly fascinated by how these technologies create immersive and innovative experiences. While I may be a bit laid-back at times, some of my best ideas come from moments of quiet reflection.</p>
+        <p>In my free time, I enjoy playing games, relaxing with good music, and staying up-to-date with the latest anime or movies. These hobbies inspire me and often fuel my creativity in both life and studies.</p>
+
+        <div class="container">
+            <div class="card">
+                <div class="photo-container">
+                    <img src="Random Pictures\About me image.jpg" alt="A photo of Jorge Mikhael Gubantes">
+                </div>
+                <div class="text-container">
+                    <h3>Jorge Mikhael Gubantes</h3>
+                    <p><strong>Age:</strong> 20</p>
+                    <p><strong>Location:</strong> Ormoc City, Philippines</p>
+                    <p><strong>Course:</strong> Bachelor of Science in Information Technology</p>
+                    <p><strong>Interests:</strong> Programming, Video Games, Music, Anime, Technology.</p>
+                    <p><strong>Goal:</strong> To innovate and create impactful software solutions while continuously learning and growing in the field of technology.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.addEventListener('load', function () {
+            document.body.classList.add('loaded');
+        });
+    </script>
+</body>
+</html>
